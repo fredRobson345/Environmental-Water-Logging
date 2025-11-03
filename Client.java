@@ -35,18 +35,18 @@ public class Client {
             String postcode = scanner.nextLine();
             writer.println(postcode);
 
-            // Prompt user for tempurature reading and send to server
+            // Prompt user for temperature reading and send to server
             System.out.println(reader.readLine()); 
-            float temp = scanner.nextLine();
+            float temp = Float.parseFloat(scanner.nextLine());
             writer.println(temp);
 
             // Prompt user for pH level and send to server
             System.out.println(reader.readLine()); 
-            int acidity = scanner.nextLine();
+            int acidity = Integer.parseInt(scanner.nextLine());
             writer.println(acidity);
             
 
-            // Prompt user for oxido-reduction potential and send to server
+            // Prompt user for oxide-reduction potential and send to server
             System.out.println(reader.readLine());
             float orp = Float.parseFloat(scanner.nextLine());
             writer.println(orp);

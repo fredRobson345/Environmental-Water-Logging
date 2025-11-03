@@ -1,4 +1,4 @@
-package orpLog;
+package orplog;
 
 import java.io.*;
 import java.net.*;
@@ -6,7 +6,7 @@ import java.net.*;
 // ClientThread implements Runnable to handle client-server communication in separate threads
 public class ClientThread implements Runnable {
     private Socket clientSocket; // socket for communication with the client
-    private Server server; // refernece to the server for logging data
+    private Server server; // reference to the server for logging data
 
     // initialise the clientSocket and server 
     public ClientThread(Socket clientSocket, Server server) {
@@ -30,12 +30,12 @@ public class ClientThread implements Runnable {
             String postcode = reader.readLine();
             
             writer.println("Please enter the Temperature reading:");
-            float temp = reader.readLine();
+            float temp = Float.parseFloat(reader.readLine());
             
             writer.println("Please enter your Acidity Level reading:");
-            int acidity = reader.readLine();
+            int acidity = Integer.parseInt(reader.readLine());
 
-            writer.println("Please enter Oxido-Reduction Potential (mV) reading:");
+            writer.println("Please enter Oxide-Reduction Potential (mV) reading:");
             float orp = Float.parseFloat(reader.readLine());
 
             ClientData data = new ClientData(userID, postcode, temp, acidity, orp);
