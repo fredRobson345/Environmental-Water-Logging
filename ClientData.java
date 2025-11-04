@@ -10,8 +10,8 @@ public class ClientData {
     private String postcode; // postcode of data collection
     private float temp; // temperature reading
     private int acidity; // pH level
-    private float orp; // oxido-reudction potential value 
-    
+    private float orp; // oxide-reduction potential value
+
 //defining constructors with a parameter
     public ClientData(String userID, String postcode, float temp, int acidity, float orp) {
         this.timestamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());

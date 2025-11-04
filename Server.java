@@ -1,4 +1,4 @@
-package orpLog;
+package orplog;
 
 import java.io.*;
 import java.net.*;
@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 public class Server {
     private int port; // port number where the server will be
     private String csvFilePath = "log.csv"; // path to csv to log the data
-    private ExecutorService threadPool = Executors.newFixedThreadPool(1); // threadpool to allow up to 1 client
+    private ExecutorService threadPool = Executors.newFixedThreadPool(1); // thread-pool to allow up to 1 client
 
     // Initialise the server port
     public Server(int port) {
@@ -41,12 +41,5 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    // main method to start the server
-    public static void main(String[] args) {
-        int port = args.length > 0 ? Integer.parseInt(args[0]) : 1; // port number default to 1
-        Server server = new Server(port); // create new server instance
-        server.startServer(); // starts the server
     }
 }
