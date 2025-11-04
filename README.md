@@ -11,4 +11,5 @@ allows one user to input data at a time is so that each part of the data is stor
 change and used in a number of ways. The data from the .CSV file can also be taken and converted into a graph.
 
 ## Next steps
-I will be taking the data from the .CSV file and creating a graph from it, so that trends can be spotted.
+The first steps will be to continue to follow SOLID and DRY principles and design patterns to refactor the code.
+Then I will be taking the data from the .CSV file and creating a graph from it, so that trends can be spotted.
