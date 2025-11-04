@@ -57,14 +57,4 @@ public class Client {
         }
     }
 
-    // main method to run client
-    public static void main(String[] args) {
-    	// sets sever IP and port from command line arguments or uses default values
-        String hostIP = args.length > 0 ? args[0] : "localhost"; // default to localhost if no IP is provided
-        int port = args.length > 1 ? Integer.parseInt(args[1]) : 1; // default to port 1 if no port is provided
-
-        // create new client instance and initiate communication with the server 
-        Client client = new Client(hostIP, port);
-        client.connectAndSendData(); // Start interaction with server
-    }
 }

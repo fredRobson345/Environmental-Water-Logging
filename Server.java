@@ -42,11 +42,4 @@ public class Server {
             e.printStackTrace();
         }
     }
-
-    // main method to start the server
-    public static void main(String[] args) {
-        int port = args.length > 0 ? Integer.parseInt(args[0]) : 1; // port number default to 1
-        Server server = new Server(port); // create new server instance
-        server.startServer(); // starts the server
-    }
 }
